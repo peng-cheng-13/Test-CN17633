@@ -1,0 +1,1 @@
+g++ -std=c++11 -I/BIGDATA/nsccgz_pcheng_1/src/catboost-0.13.1/catboost/libs/model_interface -L/BIGDATA/nsccgz_pcheng_1/src/catboost-0.13.1/catboost/libs/model_interface  -lcatboostmodel CModel.cc -o CModel

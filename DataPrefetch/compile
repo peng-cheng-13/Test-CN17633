@@ -1,0 +1,1 @@
+javac Server.java -cp /home/condor/alluxio/core/client/runtime/target/alluxio-core-client-runtime-1.6.1-jar-with-dependencies.jar

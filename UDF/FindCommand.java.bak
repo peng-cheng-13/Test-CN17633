@@ -1,0 +1,192 @@
+/*
+ * The Alluxio Open Foundation licenses this work under the Apache License, version 2.0
+ * (the "License"). You may not use this work except in compliance with the License, which is
+ * available at www.apache.org/licenses/LICENSE-2.0
+ *
+ * This software is distributed on an "AS IS" basis, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+ * either express or implied, as more fully set forth in the License.
+ *
+ * See the NOTICE file distributed with this work for information regarding copyright ownership.
+ */
+
+package alluxio.cli.fs.command;
+
+import alluxio.AlluxioURI;
+import alluxio.client.file.FileSystem;
+import alluxio.exception.AlluxioException;
+import alluxio.exception.ExceptionMessage;
+import alluxio.exception.status.InvalidArgumentException;
+
+import org.apache.commons.cli.CommandLine;
+import org.apache.commons.cli.CommandLineParser;
+import org.apache.commons.cli.DefaultParser;
+import org.apache.commons.cli.Option;
+import org.apache.commons.cli.Options;
+import org.apache.commons.cli.ParseException;
+
+import java.io.IOException;
+
+import javax.annotation.concurrent.ThreadSafe;
+
+/**
+ * Query user-defined metadata.
+ */
+@ThreadSafe
+public final class FindCommand extends WithWildCardPathCommand {
+
+  /**
+   * @param fs the filesystem of Alluxio
+   */
+  public FindCommand(FileSystem fs) {
+    super(fs);
+  }
+
+  @Override
+  public String getCommandName() {
+    return "find";
+  }
+
+  @Override
+  protected int getNumOfArgs() {
+    return 1;
+  }
+
+  @Override
+  public void runCommand(AlluxioURI path, CommandLine cl) throws AlluxioException, IOException {
+    boolean numeric = false;
+    int selectType = 0;
+    String mkey = "";
+    String qValue1 = "";
+    String qValue2 = "";
+    double v1 = 0;
+    double v2 = 0;
+    if (cl.hasOption("key")) {
+      mkey =  cl.getOptionValue("key");
+    }
+    if (cl.hasOption("eq")) {
+      if (cl.hasOption("lt") || cl.hasOption("st")) {
+        throw new IOException(
+            "Wrong query condition! Usage: find <path> [-key key -eq v1 | -lt v2 -st v3]");
+      }
+      qValue1 =  cl.getOptionValue("eq");
+      System.out.println("eq value is : " + qValue1);
+      selectType = 1;
+    }
+    if (cl.hasOption("lt")) {
+      qValue1 =  cl.getOptionValue("lt");
+      System.out.println("lt value is : " + qValue1);
+      if (isNumeric(qValue1)) {
+        numeric = true;
+        v1 = Double.valueOf(qValue1.toString());
+      }
+      selectType = 2;
+    }
+    if (cl.hasOption("st")) {
+      qValue2 =  cl.getOptionValue("st");
+      System.out.println("st value is : " + qValue2);
+      if (isNumeric(qValue2)) {
+        numeric = true;
+        v2 = Double.valueOf(qValue2.toString());
+      }
+      selectType = 3;
+    }
+    if (cl.hasOption("lt") && cl.hasOption("st")) {
+      selectType = 4;
+    }
+    System.out.println("Run");
+    switch (selectType) {
+      case 1 : { //equal
+        System.out.println("Find files in " + path
+            + " with key: " + mkey + ", where value = " + qValue1);
+        break;
+      }
+      case 2 : { //lt
+        System.out.println("Find files in " + path
+            + " with key: " + mkey + ", where value > " + qValue1);
+        break;
+      }
+      case 3 : { //st
+        System.out.println("Find files in " + path
+            + " with key: " + mkey + ", where value < " + qValue2);
+        break;
+      }
+      case 4 : { //lt and st
+        System.out.println("Find files in " + path
+            + " , with key: " + mkey + ", where value > " + qValue1 + " and value < " + qValue2);
+        break;
+      }
+      default : {
+        System.out.println("Error ");
+      }
+    }
+
+  }
+
+  /**
+   * check String is numeric or not.
+   * @param str input string
+   */
+  private boolean isNumeric(String str) {
+    int i;
+    for (i = 0; i < str.length(); i++) {
+      if (!Character.isDigit(str.charAt(i))) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  @Override
+  public String getUsage() {
+    return "find <path> [-key key -eq v1 | -lt v2 -st v3]";
+  }
+
+  @Override
+  public String getDescription() {
+    return "Query user-defined metadata";
+  }
+
+  @Override
+  public Options getOptions() {
+    Option keyOption =
+        Option.builder("key").required(true).numberOfArgs(1).desc("key option").build();
+    Option eqOption =
+        Option.builder("eq").required(false).numberOfArgs(1).desc("select eq option").build();
+    Option stOption =
+        Option.builder("st").required(false).numberOfArgs(1).desc("select st option").build();
+    Option ltOption =
+        Option.builder("lt").required(false).numberOfArgs(1).desc("select lt option").build();
+    Options tmpOp = new Options().addOption(keyOption).addOption(eqOption)
+        .addOption(stOption).addOption(ltOption);
+    return tmpOp;
+  }
+
+  @Override
+  public CommandLine parseAndValidateArgs(String... args) throws InvalidArgumentException {
+    int i;
+    Options opts = getOptions();
+    CommandLineParser parser = new DefaultParser();
+    CommandLine cmd;
+
+    try {
+      cmd = parser.parse(opts, args);
+    } catch (ParseException e) {
+      throw new InvalidArgumentException(
+          String.format("Failed to parse args for %s", getCommandName()), e);
+    }
+
+    validateArgs(cmd.getArgs());
+    return cmd;
+  }
+
+  @Override
+   public void validateArgs(String... args) throws InvalidArgumentException {
+    if (args.length < 1) {
+      System.out.println("Num of args : " + args.length);
+      throw new InvalidArgumentException(ExceptionMessage.INVALID_ARGS_NUM_INSUFFICIENT
+          .getMessage(getCommandName(), 1, args.length));
+    } else {
+      System.out.println("Num of args : " + args.length);
+    }
+  }
+}

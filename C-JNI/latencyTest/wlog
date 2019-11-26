@@ -1,0 +1,66 @@
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 1 MB to TDMS in 0.301357 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 2 MB to TDMS in 0.299776 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 4 MB to TDMS in 0.302845 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 8 MB to TDMS in 0.280017 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 16 MB to TDMS in 0.305618 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 32 MB to TDMS in 0.335162 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 64 MB to TDMS in 0.375214 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 128 MB to TDMS in 0.466725 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 256 MB to TDMS in 0.642408 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 512 MB to TDMS in 0.987122 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 1024 MB to TDMS in 1.67248 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 1 MB from TDMS in 0.306002 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 2 MB from TDMS in 0.307692 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 4 MB from TDMS in 0.344597 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 8 MB from TDMS in 0.308085 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 16 MB from TDMS in 0.319445 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 32 MB from TDMS in 0.334679 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 64 MB from TDMS in 0.354501 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 128 MB from TDMS in 0.404863 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 256 MB from TDMS in 0.516683 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 512 MB from TDMS in 0.716462 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 1024 MB from TDMS in 1.1352 seconds

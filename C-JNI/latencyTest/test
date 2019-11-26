@@ -1,0 +1,4 @@
+#!/bin/bash
+./write 0
+echo 3 > /proc/sys/vm/drop_caches
+./read 0

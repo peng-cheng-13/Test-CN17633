@@ -1,0 +1,2 @@
+#gcc  -fpic -c -ldl hack_stackoverflow_improved.c hashmap.c 
+gcc  -fpic  -shared -lc -ldl -o hack_stackoverflow_improved.so hack_stackoverflow_improved.c hashmap.c

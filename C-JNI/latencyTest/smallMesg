@@ -1,0 +1,70 @@
+Context successed 
+Init jTDMSFileSystem  successed 
+size of mydata is : 8 
+Write 128 KB to TDMS in 0.278241 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+size of mydata is : 8 
+Write 256 KB to TDMS in 0.273183 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+size of mydata is : 8 
+Write 512 KB to TDMS in 0.277185 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+size of mydata is : 8 
+Write 1024 KB to TDMS in 0.281603 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+size of mydata is : 8 
+Write 2048 KB to TDMS in 0.279882 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+size of mydata is : 8 
+Write 4096 KB to TDMS in 0.282551 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+size of mydata is : 8 
+Write 8192 KB to TDMS in 0.287521 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+size of mydata is : 8 
+Write 16384 KB to TDMS in 0.305028 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+size of mydata is : 8 
+Write 32768 KB to TDMS in 0.328846 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+size of mydata is : 8 
+Write 65536 KB to TDMS in 0.366484 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 128 KB from TDMS in 0.302305 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 256 KB from TDMS in 0.298493 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 512 KB from TDMS in 0.308328 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 1024 KB from TDMS in 0.300225 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 2048 KB from TDMS in 0.29949 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 4096 KB from TDMS in 0.307391 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 8192 KB from TDMS in 0.295822 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 16384 KB from TDMS in 0.309951 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 32768 KB from TDMS in 0.329381 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 65536 KB from TDMS in 0.365095 seconds

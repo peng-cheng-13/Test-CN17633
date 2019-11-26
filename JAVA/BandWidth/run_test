@@ -1,0 +1,4 @@
+#!/bin/bash
+java -cp /home/condor/install/alluxio-2.0.1/client/alluxio-2.0.1-client.jar:. Write
+echo 3 > /proc/sys/vm/drop_caches
+java -cp /home/condor/install/alluxio-2.0.1/client/alluxio-2.0.1-client.jar:. Read

@@ -1,0 +1,13 @@
+mProjectPP	16	4222384.0	0	2	1	6	1	p2mass-atlas-ID00001s-jID00001.fits	4164545.0
+mProjectPP	16	4222384.0	0	2	2	6	1	p2mass-atlas-ID00001s-jID00001_area.fits	4164545.0
+mDiffFit	62	16631314.0	2	2	1	1	2	fit.txt	277.0
+mDiffFit	62	16631314.0	2	2	2	1	2	diff.txt	299819.0
+mConcatFit	1	338034.0	62	1	1	1	3	fits.tbl	13017.0
+mBgModel	1	15697.0	1	1	1	16	4	corrections.tbl	850.0
+mBackground	16	8329940.0	2	2	1	1	5	c2mass-atlas-ID00001s-jID00001_area.fits	4156492.0
+mBackground	16	8329940.0	2	2	2	1	5	c2mass-atlas-ID00001s-jID00001.fits	4156492.0
+mImgTbl	1	133180228.0	16	1	1	1	6	newcimages.tbl	5566.0
+mAdd	1	5870.0	1	2	1	1	7	mosaic_ID00097_ID00097.fits	95657822.0
+mAdd	1	5870.0	1	2	2	1	7	mosaic_ID00097_ID00097_area.fits	95657822.0
+mShrink	1	191315644.0	1	1	1	1	8	shrunken_ID00098_ID00098.fits	3827844.0
+mJPEG	1	3827844.0	1	1	1	0	9	shrunken_ID00098_ID00098.jpg	346968.0

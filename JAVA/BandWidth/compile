@@ -1,0 +1,3 @@
+#!/bin/bash
+javac Write.java -cp /home/condor/install/alluxio-2.0.1/client/alluxio-2.0.1-client.jar
+javac Read.java  -cp /home/condor/install/alluxio-2.0.1/client/alluxio-2.0.1-client.jar

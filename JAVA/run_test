@@ -1,0 +1,4 @@
+#!/bin/bash
+java -cp /home/condor/alluxio/core/client/runtime/target/alluxio-core-client-runtime-1.6.1-jar-with-dependencies.jar:. Write
+echo 3 > /proc/sys/vm/drop_caches
+java -cp /home/condor/alluxio/core/client/runtime/target/alluxio-core-client-runtime-1.6.1-jar-with-dependencies.jar:. Read

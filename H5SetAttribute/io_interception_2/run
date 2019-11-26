@@ -1,0 +1,4 @@
+gcc -fpic -c -ldl file_io_operation_interception.c
+gcc -shared -lc -ldl -o file_io_operation_interception.so file_io_operation_interception.o
+
+

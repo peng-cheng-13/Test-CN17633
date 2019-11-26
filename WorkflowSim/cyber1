@@ -1,0 +1,6 @@
+ExtractSGT	2	39055913920.0	0	2	1	23	1	FFI_0_1_subfx.sgt	119262920.0	0
+ExtractSGT	2	39055913920.0	0	2	2	23	1	FFI_0_1_subfy.sgt	119262920.0	2
+SeismogramSynthesis	48	241894606.0	1	1	1	2	2	Seismogram_FFI_0_1_ID00037.grm	24000.0	2
+PeakValCalcOkaya	48	24000.0	1	1	1	1	3	PeakVals_FFI_0_1_ID00037.bsa	216.0	0
+ZipSeis	1	0.0	48	1	1	0	3	Cybershake_Seismograms.zip	175928.0	1
+ZipPSA	1	0.0	48	1	1	0	4	Cybershake_PSA.zip	1400.0	2

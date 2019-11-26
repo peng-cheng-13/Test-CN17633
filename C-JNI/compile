@@ -1,0 +1,7 @@
+#!/bin/bash
+#g++ -std=c++11 write.cc -I/home/condor/install/liballuxio/include/ -I/usr/software/java/jdk1.8.0_121/include/ -I/usr/software/java/jdk1.8.0_121/include/linux -L/home/condor/install/liballuxio/lib -lalluxio -o write
+#g++ -std=c++11 read.cc -I/home/condor/install/liballuxio/include/ -I/usr/software/java/jdk1.8.0_121/include/ -I/usr/software/java/jdk1.8.0_121/include/linux -L/home/condor/install/liballuxio/lib -lalluxio -o read
+
+#g++ -std=c++11 write.cc -I/BIGDATA/nsccgz_pcheng_1/install/libtdms/include/ -I/usr/software/java/jdk1.8.0_121/include/ -I/usr/software/java/jdk1.8.0_121/include/linux -L/BIGDATA/nsccgz_pcheng_1/install/libtdms/lib -lalluxio -o write
+#g++ -std=c++11 read.cc -I/BIGDATA/nsccgz_pcheng_1/install/libtdms/include/ -I/usr/software/java/jdk1.8.0_121/include/ -I/usr/software/java/jdk1.8.0_121/include/linux -L/BIGDATA/nsccgz_pcheng_1/install/libtdms/lib -lalluxio -o read
+g++ -std=c++11 WriteBW.cc -I/home/condor/install/liballuxio/include/ -I/usr/software/java/jdk1.8.0_121/include/ -I/usr/software/java/jdk1.8.0_121/include/linux -L/home/condor/install/liballuxio/lib -lalluxio -o WriteBW

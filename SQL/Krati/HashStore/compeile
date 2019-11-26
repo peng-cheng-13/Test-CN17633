@@ -1,0 +1,3 @@
+#!/bin/bash
+javac -cp /home/condor/src/krati/krati-main/target/krati-0.4.9-jar-with-dependencies.jar:. HashStore.java
+javac -cp /home/condor/src/krati/krati-main/target/krati-0.4.9-jar-with-dependencies.jar:. Test.java

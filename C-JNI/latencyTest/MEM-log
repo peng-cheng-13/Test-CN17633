@@ -1,0 +1,99 @@
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 1 MB to TDMS in 0.281898 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 2 MB to TDMS in 0.272844 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 4 MB to TDMS in 0.277802 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 8 MB to TDMS in 0.287285 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 16 MB to TDMS in 0.307067 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 32 MB to TDMS in 0.324255 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 64 MB to TDMS in 0.361717 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 128 MB to TDMS in 0.445283 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 256 MB to TDMS in 0.606405 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 512 MB to TDMS in 0.883184 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 1024 MB to TDMS in 1.45995 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 1 MB to TDMS in 0.276903 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 2 MB to TDMS in 0.27526 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 4 MB to TDMS in 0.278331 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 8 MB to TDMS in 0.280501 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 16 MB to TDMS in 0.303973 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 32 MB to TDMS in 0.320372 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 64 MB to TDMS in 0.370157 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 128 MB to TDMS in 0.440159 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 256 MB to TDMS in 0.581296 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 512 MB to TDMS in 0.856182 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Write 1024 MB to TDMS in 1.46233 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 1 MB from TDMS in 0.30161 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 2 MB from TDMS in 0.306961 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 4 MB from TDMS in 0.309351 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 8 MB from TDMS in 0.306479 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 16 MB from TDMS in 0.315659 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 32 MB from TDMS in 0.330993 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 64 MB from TDMS in 0.361206 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 128 MB from TDMS in 0.400021 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 256 MB from TDMS in 0.507603 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 512 MB from TDMS in 0.708973 seconds
+Context successed 
+Init jTDMSFileSystem  successed 
+Read 1024 MB from TDMS in 1.1163 seconds

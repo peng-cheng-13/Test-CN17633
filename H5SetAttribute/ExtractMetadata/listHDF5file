@@ -1,0 +1,56 @@
+#!/bin/bash
+set -e
+if [ $# -lt 2 ];then
+  echo "Usage : ./listHDF5file [target_dir] [num_of_threads]"
+  exit;
+fi
+
+echo 3 > /proc/sys/vm/drop_caches
+
+ROOT_DIR=`pwd`
+echo "root dir is $ROOT_DIR"
+echo "List HDF5 file paths into $ROOT_DIR/path.log"
+rm -f $ROOT_DIR/path.log
+
+function listh5file(){
+  echo "Entering dir $1"
+  cd $1
+  ls . | grep .h5 | sed "s:^:`pwd`/: " >> $ROOT_DIR/path.log
+  for i in `ls -F | grep /`;do(listh5file $i);done
+  cd ..
+  echo "exit dir $1"
+}
+
+function getTiming() {  
+    start=$1  
+    end=$2  
+     
+    start_s=$(echo $start | cut -d '.' -f 1)  
+    start_ns=$(echo $start | cut -d '.' -f 2)  
+    end_s=$(echo $end | cut -d '.' -f 1)  
+    end_ns=$(echo $end | cut -d '.' -f 2)   
+    time=$(( ( 10#$end_s - 10#$start_s ) * 1000 + ( 10#$end_ns / 1000000 - 10#$start_ns / 1000000 ) ))  
+    echo "$time ms"  
+} 
+
+alluxio fs rm -R /H5test
+alluxio fs mkdir /H5test
+
+starttime=$(date +%s.%N)
+
+ls $1 | grep .h5 | sed "s:^:`pwd`/: " >> $ROOT_DIR/path.log
+for i in `ls -F | grep /`;do(listh5file $i);done
+
+midtime=$(date +%s.%N)
+
+echo "extract atrribute metadata from HDF5 files"
+mpiexec --allow-run-as-root -n $2 ./scanHDF5file
+
+endtime=$(date +%s.%N)
+
+echo "scan time is" 
+getTiming $starttime $midtime
+echo "extract time is"
+getTiming $midtime $endtime
+echo "Total time is"
+getTiming $starttime $endtime
